@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  ruby-cli:
+    build:
+      context: .
+      dockerfile: .Dockerfile
+    container_name: ruby-cli
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ruby main.rb
